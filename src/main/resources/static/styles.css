@@ -1,0 +1,105 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;  /* Fondo neutro claro */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #4682b4; /* Azul medianoche para el título */
+}
+
+/* Container for the Form and Property List */
+.container {
+    display: flex;
+    justify-content: space-between; /* Espaciado entre el formulario y la lista */
+    margin: 20px;
+}
+
+/* Form Container Styling */
+.form-container {
+    width: 45%;  /* Formulario ocupa el 45% del espacio */
+    padding: 20px;
+    background-color: #ffffff;  /* Fondo blanco para el formulario */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #5c6bc0;  /* Color pastel azul para el subtítulo */
+}
+
+/* Input Fields Styling */
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #b2ebf2; /* Bordes de color azul claro */
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="text"], input[type="number"], textarea {
+    background-color: #f1f8e9; /* Fondo muy suave verde pastel */
+}
+
+button {
+    background-color: #81c784; /* Botón verde pastel */
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #66bb6a; /* Botón verde más oscuro al pasar el cursor */
+}
+
+/* Property List Styling */
+.property-list {
+    width: 45%;  /* Lista de propiedades ocupa el 45% del espacio */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.property-list h2 {
+    text-align: center;
+    color: #5c6bc0;  /* Subtítulo en azul pastel */
+    margin-bottom: 15px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #b2ebf2;  /* Bordes azul claro */
+}
+
+table th {
+    background-color: #b3e5fc;  /* Azul pastel en el encabezado */
+    color: #333;
+    font-weight: bold;
+}
+
+table td {
+    background-color: #e1f5fe;  /* Fondo azul muy claro para las celdas */
+}
+
+/* Hover Effects */
+table tr:hover {
+    background-color: #c1e1f4;  /* Color de hover más oscuro para filas */
+}
