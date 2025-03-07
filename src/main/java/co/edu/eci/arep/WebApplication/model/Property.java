@@ -1,4 +1,4 @@
-package co.edu.eci.arep.WebApplication.Model;
+package co.edu.eci.arep.WebApplication.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,17 +9,16 @@ import jakarta.persistence.Id;
 public class Property {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long propertyId;
     private String address;
-    private Double price;
-    private Double size;
+    private int price;
+    private int size;
     private String description;
 
-    protected Property() {}
+    public Property() {}
 
-    public Property(Long propertyId, String address, Double price, Double size, String description) {
-        this.propertyId = propertyId;
+    public Property(String address, int price, int size, String description) {
         this.address = address;
         this.price = price;
         this.size = size;
@@ -34,16 +33,36 @@ public class Property {
         return address;
     }
 
-    public Double getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public Double getSize() {
+    public int getSize() {
         return size;
     }
 
     public String getDescription() {
         return description;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public void setPropertyId(Long propertyId) {
+        this.propertyId = propertyId;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
     }
 
     @Override
@@ -55,5 +74,9 @@ public class Property {
                 ", size=" + size +
                 ", description='" + description + '\'' +
                 '}';
+    }
+
+    public void setId(long l) {
+        propertyId = l;
     }
 }
