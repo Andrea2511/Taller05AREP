@@ -23,26 +23,6 @@ public class PropertyService {
         return propertyRepository.save(property);
     }
 
-    public List<Property> getFilteredProperties(String address, Double price, Double size) {
-        Specification<Property> spec = Specification.where(null);
-
-        if (address != null && !address.isEmpty()) {
-            spec = spec.and((root, query, criteriaBuilder) ->
-                    criteriaBuilder.like(criteriaBuilder.lower(root.get("address")), "%" + address.toLowerCase() + "%"));
-        }
-        if (price != null) {
-            spec = spec.and((root, query, criteriaBuilder) ->
-                    criteriaBuilder.lessThanOrEqualTo(root.get("price"), price));
-        }
-        if (size != null) {
-            spec = spec.and((root, query, criteriaBuilder) ->
-                    criteriaBuilder.greaterThanOrEqualTo(root.get("size"), size));
-        }
-
-        return (List<Property>) propertyRepository.findAll(spec);
-    }
-
-
     public List<Property> getAllProperties() {
         if(propertyRepository.findAll() != null){
             return (List<Property>) propertyRepository.findAll();
