@@ -201,3 +201,7 @@ Se refleja el cambio
 ![img_6.png](img/img_6.png)
 
 ---
+
+## Pruebas 
+
+![img_7.png](img/img_7.png)
