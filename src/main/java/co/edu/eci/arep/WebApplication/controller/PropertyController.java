@@ -30,6 +30,11 @@ public class PropertyController {
     public List<Property> getAllProperties(){
         return propertyService.getAllProperties();
     }
+    
+    @GetMapping("/")
+    public String hello() {
+        return "Hola desde Spring Boot";
+    }
 
     @GetMapping("/{id}")
     public ResponseEntity<Property> getPropertyById(@PathVariable Long id){
@@ -46,4 +51,6 @@ public class PropertyController {
         propertyService.deleteProperty(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+    
 }
